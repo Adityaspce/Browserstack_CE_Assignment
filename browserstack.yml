@@ -1,0 +1,34 @@
+# =============================
+# Set BrowserStack Credentials
+# =============================
+# Add your BrowserStack userName and accessKey here or set BROWSERSTACK_USERNAME and
+# BROWSERSTACK_ACCESS_KEY as env variables
+userName: badityachavan_2iNfhn
+accessKey: vpy7g5qsePH66y3xSxR8
+
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: 120.0
+  - os: OS X
+    osVersion: Monterey
+    browserName: Safari
+    browserVersion: 15.6
+  - os: Windows
+    osVersion: 11
+    browserName: Firefox
+    browserVersion: 146.0
+browserstackLocal: false
+buildName: browserstack-build-1
+projectName: BrowserStack Sample
+
+
+# ===================
+# Debugging features
+# ===================
+debug: true # <boolean> # Set to true if you need screenshots for every selenium command ran
+networkLogs: true # <boolean> Set to true to enable HAR logs capturing
+consoleLogs: info # <string> Remote browser's console debug levels to be printed (Default: errors)
+# Available options are `disable`, `errors`, `warnings`, `info`, `verbose` (Default: errors)
+
