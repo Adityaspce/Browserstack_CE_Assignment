@@ -1,44 +1,63 @@
-# python-selenium-browserstack
-Run python tests on browserstack using the SDK.
 
-## Prerequisite
+# Selenium Automation – BrowserStack Technical Assignment
+
+This project demonstrates web scraping, API integration, text processing, and cross-browser execution using Selenium.
+
+---
+
+## ✅ Assignment Coverage
+
+- Visit El País Opinion section (Spanish website)
+- Scrape first 5 articles
+- Print article titles and content in Spanish
+- Download cover images (if available)
+- Translate titles to English using a Translation API
+- Identify words repeated more than twice across translated titles
+- Run locally
+- Execute on BrowserStack across 3 parallel sessions (desktop + mobile)
+
+---
+
+## 📂 Project Structure
+
 ```
-python3 should be installed
+project-root/
+│
+├── test/
+│   ├── local-test.py      # Local execution
+│   └── test2.py           # BrowserStack multi-platform execution
+│
+├── browserstack.yml
+├── requirements.txt
+└── README.md
 ```
 
-## Setup
-* Clone the repo
+Images are saved in dynamically generated folders to ensure parallel-safe execution.
+
+---
+
+## ▶ Run Locally
+
 ```
-git clone -b sdk https://github.com/browserstack/python-selenium-browserstack.git
-``` 
-* Install packages through requirements.txt
-```
-pip3 install -r requirements.txt
+python test/local-test.py
 ```
 
-## Set BrowserStack Credentials
-* Add your BrowserStack username and access key in the `browserstack.yml` config fle.
-* You can also export them as environment variables, `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY`:
+---
 
-  #### For Linux/MacOS
-    ```
-    export BROWSERSTACK_USERNAME=<browserstack-username>
-    export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
-    ```
-  #### For Windows
-    ```
-    setx BROWSERSTACK_USERNAME=<browserstack-username>
-    setx BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
-    ```
+## ☁ Run on BrowserStack
 
-## Running tests
-* Run sample test:
-  - To run the sample test across platforms defined in the `browserstack.yml` file, run:
-    ```
-    browserstack-sdk ./tests/test2.py
-    ``` 
-* Run tests on locally hosted website:
-  - To run the local test across platforms defined in the `browserstack.yml` file, run:
-    ```
-    browserstack-sdk ./tests/local-test.py
-    ``` 
+```
+browserstack-sdk python test/test2.py
+```
+
+---
+
+## ☁ Run on BrowserStack
+
+- View the public build in browserstack automation for parallel testng on multiple browsers.
+- https://automate.browserstack.com/projects/BrowserStack+Sample/builds/browserstack-build/18?public_token=12aa6e64bb9ef9205401aa08561a63a2ce2ed98e7878e2be836537a0f38afe35
+
+---
+
+This implementation demonstrates Selenium automation, API integration, parallel execution, and proper BrowserStack session handling.
+
